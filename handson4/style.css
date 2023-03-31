@@ -1,0 +1,31 @@
+h1{
+      color: red;
+}
+h2{
+      color:red;
+      font-style: italic;
+}
+p{
+      color: brown;
+}
+ol{
+      color: brown;
+     line-height: 50px;
+      
+}
+ul{
+      color: brown;
+      letter-spacing: 5px ;
+      line-height: 20px;
+}
+a{
+      font-style: italic;
+      text-decoration: none;
+}
+/* div{
+      border: solid 1px black;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: brown;
+} */
