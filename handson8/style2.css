@@ -1,0 +1,158 @@
+*{
+      box-sizing: border-box;
+      padding: 0px;
+      margin: 0px;
+}
+.body1{
+      background-image: url(./sky.jpg);
+      background-size: cover;
+      height: 600px;
+      width: 100%;
+      overflow: hidden;
+      border: solid 15px white;
+      border-left-color:orange;
+      border-right-color: green;
+}
+.header{
+
+      width: 100%;
+      height: 70px;
+      /* border: solid 1px black; */
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      font-weight: bold;
+      font-size: 60px;
+}
+.headerbox1{
+      height: 100%;
+      width:auto;
+      /* border: solid 1px black; */
+      background-color: orange;
+}
+.headerbox2{
+      height: 100%;
+      width: auto;
+      /* border: solid 1px black; */
+     background-color: white;
+}
+.headerbox3{
+      height: 100%;
+      width: auto;
+      /* border: solid 1px black; */
+      background-color: green;
+}
+.road{
+      width:500%;
+      height: 160px;
+      background-image: url(./road.jpg);
+      position: relative;
+      top: 220px;
+      animation: road 20s infinite linear;
+     
+}
+@keyframes road {
+      100%{
+            transform: translateX(-2000px);
+      }
+}
+.city{
+    height: 150px;
+    width: 500%;
+      background-image: url(./city.png);
+      background-position: center;
+     
+      position: relative;
+      top: 220px;
+      z-index: 2;
+      animation: city 20s infinite linear;
+}
+@keyframes city {
+      100%{
+            transform: translateX(-2000px);
+      }
+}
+.car{
+      width:470px;
+      height: 200px;
+      background-image: url(./car.png);
+      background-size: cover;
+     
+      position: relative;
+      bottom: 50px;
+      left: 400px;
+      z-index: 3;
+      animation: car 2s infinite linear;
+      
+}
+@keyframes car {
+      0%{
+            transform: translateY(1px);
+      }
+      50%{
+            transform: translateY(-5px);
+      }
+      100%{
+            transform: translateY(1px)
+      }
+
+      
+}
+.wheel1{
+      width: 77px;
+      height:77px;
+      background-image: url(./wheel.png);
+      background-size: cover;
+      position: relative;
+      z-index: 4;
+      left: 447px;
+      bottom: 143px;
+      animation: wheel 1s infinite linear ;
+}
+      @keyframes wheel {
+            100%{
+                  transform: rotate(360deg);
+            }
+            
+      }
+.wheel2{
+      width: 77px;
+      height:77px;
+      background-image: url(./wheel.png);
+      background-size: cover;
+      position: relative;
+      z-index: 4;
+      left: 740px;
+      bottom: 220px;
+      animation: wheel 1s infinite linear ;
+      
+}
+.sun{
+      background-image: url(./sun.webp);
+      
+    background-position:center;
+      width: 100px;
+      height:100px;
+      border-radius: 50%;
+      position: relative;
+      z-index: 5;
+      left: 1000px;
+      bottom: 600px;
+      animation: sun 30s linear infinite;
+}
+@keyframes sun{
+      100%{
+            transform: translate(-500px);
+      }
+} 
+.flag{
+      background-image: url(./Tiranga1.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 90px;
+      width: 90px;
+      position: relative;
+      z-index: 5;
+      left: 765px;
+      bottom: 515px;
+}

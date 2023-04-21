@@ -1,0 +1,206 @@
+*{
+      box-sizing: border-box;
+      margin: 0px;
+      padding: opx;
+}
+body{
+      background-color: yellow;
+}
+
+.header{
+      width: 60%;
+      border: solid 1px black;
+      margin: auto;
+      height: 500px;
+      margin-top: 20px;
+}
+h1{
+      text-align: center;
+      margin-top: 20px;
+}
+h2{
+      margin-top: 100px;
+}
+.box{
+      border: solid 1px black;
+      width: 80%;
+      height: 25%;
+      display: flex;
+      margin: auto;
+}
+.box-a{
+      width: 12%;
+      height: 60%;
+      border: solid 1px teal;
+      margin: auto;
+      background-color: teal;
+      animation: sample1 2s infinite alternate;
+}
+@keyframes sample1 {
+      0%{
+            transform:skewX(-30deg);
+      }
+      100%{
+            transform: skewX(30deg);
+      }
+}
+
+
+.box-b{
+      width: 12%;
+      height: 60%;
+      border: solid 1px teal;
+      margin: auto;
+      background-color: grey;
+      animation: sample2 2s infinite alternate;
+}
+@keyframes sample2 {
+      0%{
+            transform:skewY(-30deg);
+      }
+      100%{
+            transform: skewY(30deg);
+      }
+}
+.box-c{
+      width: 12%;
+      height: 60%;
+      border: solid 1px teal;
+      margin: auto;
+      background-color: teal;
+      animation: sample3 2s infinite;
+}
+@keyframes sample3 {
+    
+      100%{
+            transform:rotate(360deg);
+      }
+}
+
+.box-d{
+      width: 12%;
+      height: 60%;
+      border: solid 1px teal;
+      margin: auto;
+}
+.box-d1{
+      background-color: aqua;
+      animation: sample4 2s infinite alternate;
+}
+@keyframes sample4 {
+0%{
+      transform: scale(1,1);
+}
+100%{
+      transform: scale(1,1.5);
+}
+}
+
+
+.box-d2{
+      background-color: red;
+      animation: sample5 2s infinite alternate;}
+      @keyframes sample5 {
+            0%{
+                  transform: scale(1,1);
+            }
+            100%{
+                  transform: scale(0.5,1);
+            }
+            }
+.box-d3{
+      background-color: teal;
+      animation: sample3 2s infinite;
+      animation: sample6 2s infinite alternate;}
+      @keyframes sample6 {
+           
+            100%{
+                  transform:rotate(360deg);
+            }
+            }
+.a{
+      font-size: 30px;
+      font-weight: bold;
+      color: rgb(63, 24, 24);
+     text-align: center;
+     margin-top: 30px;
+}
+
+
+
+
+/* second page */
+.boxing-main{
+      width: 80%;
+      height: auto;
+      /* border: solid 1px black; */
+     margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      
+      /* padding-left: 160px; */
+}
+.boxing{
+      width: 80px;
+      height: 80px;
+      background-color: green;
+      margin-top: 20px;
+      /* transition: all 2s ; */
+}
+
+
+.n{
+transition: 2s ;
+}
+.n:hover{
+  width: 200px;    
+}
+.m{
+      transition: all 2s ;
+}
+.m:hover{
+      width: 150px;
+      height:150px;
+     
+      }
+.o{
+ transition: 2s all
+}
+.o:hover
+{
+      width: 200px;
+}
+.p{
+transition: 2s ease;
+}
+.p:hover{
+    width: 200px;
+}
+.q{
+      transition: 2s ease-in;
+}
+.q:hover{
+    width: 200px;
+}
+
+.r{
+      transition: 2s ease-out;
+}
+.r:hover{
+    width: 200px;
+}
+.s{
+      transition: 2s ease-in-out;
+}
+.s:hover{
+    width: 200px;
+}
+.abc{
+      font-size: 30px;
+      font-weight: bold;
+     
+      display:flex;
+      width: 80%;
+      /* border: solid 1px red; */
+      justify-content: center;
+}
