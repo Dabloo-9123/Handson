@@ -4,6 +4,9 @@
       margin: 0px;
       padding: opx;
 }
+body{
+      background-color: black;
+}
 .main-container{
       width: 90%;
       height: auto;
