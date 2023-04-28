@@ -1,0 +1,120 @@
+
+*{
+      box-sizing: border-box;
+      margin: 0px;
+      padding: opx;
+}
+.main-container{
+      width: 90%;
+      height: auto;
+      margin: auto;
+      margin-top: 100px;
+      /* border: solid 1px black; */
+      display: grid;
+      grid-template-columns: auto auto auto auto auto;
+     gap: 10px;
+
+}
+.box{
+     /* width: 180px;
+     height: 180px; */
+     height: 180px;
+     /* border: solid 1px black;  */
+     background-color: chartreuse;
+     transition: all 1s;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-weight:bold;
+     color: white;
+}
+.box1{
+      
+}
+.box1:hover{
+      background-color: red;
+      transform: translateX(15px);
+}
+.box2{
+      
+}
+.box2:hover{
+       background-color: red;
+      transform: translateX(-15px);
+}
+.box3{
+      
+}
+.box3:hover{
+      background-color: red;
+      transform: translatey(-15px); 
+}
+.box4{
+      
+}
+.box4:hover{
+      background-color: red;
+      transform: translatey(15px);  
+}
+.box5{
+      
+}
+.box5:hover{
+      background-color: red;
+      transform: scale(1.5,1.5);
+}
+
+.box6{
+      
+}
+.box6:hover{
+       background-color: red;
+      transform: scale(0.5,0.5);
+}
+
+.box7{
+      
+}
+.box7:hover{
+      background-color: red;
+      border-radius: 50%;
+}
+.box8{
+      
+}
+.box8:hover{
+      background-color: red;
+      transform:scale(2,1);
+}
+.box9{
+      
+}
+.box9:hover{
+       background-color: red;
+      transform: scale(1,2);
+}
+.box10{
+      
+}
+.box10:hover{
+      background-color: red;
+      transform: rotate(45deg);
+}
+
+@media screen and (min-width:340px) and (max-width:560px) {
+      .main-container{
+             grid-template-columns: auto auto auto;
+      }
+      .box{
+            width: 100px;
+            height: 100px;
+            gap: 5px;
+      }
+      .box10{
+            margin: auto;
+            position: relative;
+           left: 108%;
+           justify-content: center;
+           text-align: center;
+      }
+}
