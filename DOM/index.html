@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css">
+      
+</head>
+<body>
+      <p>Q1. Write the code to access element which is having id as "text"</p>
+      <pre>
+            var a = document.getElementById("Text")
+a.innerText="Prepbytes is the best online platform to learn coding from scrach.";
+a.style.backgroundColor="teal"
+console.log(a)
+      </pre>
+      <h2 id="Text">Element having id "Text".</h2>
 
+      <p>Q2. Write the code to access element which is having tag as "h1"</p>
+      <pre>var b = document.getElementsByTagName("h1");
+            console.log(b[0].innerText);
+            b[0].innerText="Element acceced by using tagname.";
+            console.log(b[0].innerText);</pre>
+      <h1>Acces element having tag h1</h1>
+
+
+      <p>Q3. Write the code to access element which is having class as "box"</p>
+      <pre>var c=document.getElementsByClassName("box");
+            console.log(c);
+            c[0].innerText="Updated box1";
+            c[1].innerText="Updated box2";
+            c[2].innerText="Updated box3";
+            console.log(c[0].innerText,c[1].innerText,c[2].innerText)</pre>
+
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+
+
+      <p>Q4."
+
+            Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</p>
+            <h1 class="change_heading">Hello</h1>
+           
+            <button onclick="changetext()">Change Text</button>
+
+            <p>Q5. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</p>
+            <p class="replacetext">Hello world</p>
+            <button onclick="replacetext1()">Replace text</button>
+            <p>Q6. "
+
+                  Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in the above given h1 tag using DOM functions"</p>
+           
+           
+           <h1 id="heading">Heading color is red using DOM.</h1>
+
+
+           <p>Q7. Create three cards on HTML page and arrange them using flex
+             property in row or horizontal direction and also create button at the bottom
+             named "Change Flex direction". When user clicks on this button,
+              the cards arrangement should be changed to vertical direction.</p>
+           
+           <p style="background-color: aqua;">Single click for row to column and double click for row to columnb</p>
+           <div class="main_card">
+            <div class="child_card"></div>
+            <div class="child_card"></div>
+            <div class="child_card"></div>
+           </div>
+
+           <button onclick="cart_vertical()" ondblclick="ondoubleclick()">Change direction</button>
+           
+           <p>Q7. What’s the difference between window vs document?</p>
+
+           <table>
+            <tr>
+            <th>Window</th>
+            <th>Document</th>
+        </tr>
+            <tr><td>The window object is the topmost object of the DOM hierarchy.</td> 
+                <td>The document object represent a web page that is loaded in the browser. </td> 
+            </tr>
+            <tr>
+                <td>It represents a browser window or frame that displays the contents of the webpage.By accessing the document object, we can access the element in the HTML page.</td>
+                <td>By accessing the document object, we can access the element in the HTML page. </td>
+            </tr>
+                <tr>
+                    <td>Whenever a window appears on the screen to display the contents of the document, the window object is created.</td>
+                <td>With the help of document objects, we can add dynamic content to our web page.</td>
+                </tr>
+            </table>
+           
+           
+           <h1 class="clock">Start Clock</h1>
+           <h1 class="clock"></h1>
+           
+           <a href="./index2.html">
+            <button>Play Game</button>
+           </a>
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+            <script src="./index.js"></script>
+</body>
+</html>
