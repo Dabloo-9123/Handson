@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      <h1>Closure handson</h1>
+      <pre>Q1.
+             function counter(){
+                  var counter = 0;
+              
+                  function IncreaseCounter() {
+                      return counter += 1;
+                  };
+              
+                  return IncreaseCounter;
+              }
+              
+              var counter = counter();
+              alert(counter());
+              alert(counter());
+              alert(counter());
+              alert(counter());
+      </pre>
+      <p>Ans. Alert window happen 4 times by value 1,2,3,4 because function Increasecount() returning the value 1,2,3,4 and we are calling count function which is stored in the variable count inside an alert function . </p>
+     <pre>Q2.
+      "let count = 0;
+(function () {
+  if (count === 0) {
+    let count = 1;
+    console.log(count); // What is logged?
+  }
+  console.log(count); // What is logged?
+})();"
+     </pre>
+     
+     <p>Ans. The output of first console.log will be 1 because we in block scope the value of count is assigned to 1 and again the universal value of count is 0 so the second console will give the output of 0.</p>
+     
+     <pre>Q3.
+      for (var i = 0; i<3; i++) {
+            setTimeout(function log() {
+              console.log(i);
+            }, 1000);
+          }
+     </pre>
+    
+     <p>Ans. The output will be 3 time 3 because the loop is printing the value of i after 1 sec but the code are getting executed in nano second and after 1 second the value of i will be 3 because in condition the value of i should be less than 3 .</p>
+      <p>Q4. Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</p>
+     <pre>Ans.  
+      function Outer(length)
+      {
+          function Inner(breadth)
+          {
+              area = length*breadth;
+              return area;
+          }
+          return Inner(5);
+      }
+      
+      var ans = Outer(3);
+      console.log(ans)
+     </pre>
+     <p>Q5. Take a variable in outer function and create an inner function to increase the counter every time it is called</p>
+      <pre>Ans. 
+            function Outer1()
+            {
+                var count=4
+                function Inner1()
+                {
+                    count=6
+                    count++;
+                    return count;
+                }
+              return Inner1()
+            }
+            console.log(Outer1())
+            console.log(Outer1())
+            console.log(Outer1())
+      </pre>
+     <pre>Q6
+      "Print Output
 
+      var a = 12;
+      (function () {
+        alert(a);
+      })();"
+     </pre>
+     <p>Ans. An Alert will be showed once or happen bye showing 12 because we are using alert</p>
+     <pre>Q7.
+      "var a = 10;
+      var x = (function () {
+        var a = 12;
+        return function () {
+          alert(a);
+        };
+      })();
+      x();"
+     </pre>
+
+     <p>Ans. Alert by showing value 12 because var a=12 will be the value of a inside the function.</p>
+    <pre>Q8.
+      "var globalVar = ""xyz"";
+
+      (function outerFunc(outerArg) {
+          var outerVar = 'a';
+          
+          (function innerFunc(innerArg) {
+          var innerVar = 'b';
+          
+          console.log(
+              ""outerArg = "" + outerArg + ""\n"" +
+              ""innerArg = "" + innerArg + ""\n"" +
+              ""outerVar = "" + outerVar + ""\n"" +
+              ""innerVar = "" + innerVar + ""\n"" +
+              ""globalVar = "" + globalVar);
+          
+          })(456);
+      })(123);"
+    </pre>
+    <p>Ans. The output will be given below of above code first and sec value will be the parameter printed shown clearly and other variable simply targeted by their variable name because inner function can access all the global variable if the relevant function don't have variable assiciated with the name. 
+      <p>outerArg = 123</p>
+      <p> innerArg = 456</p>
+      <p>outerVar = a</p>
+      <p>  innerVar = b</p>
+      <p>globalVar = xyz</p>
+    </p>
+     <script src="./index.js"></script>
+</body>
+</html>
