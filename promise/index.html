@@ -1,1 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      <h1>Promise Handson</h1>
 
+      <p>Q1. Write one example explaining how you can write a callback function.</p>
+      <pre>ans.
+            function areaOfQuad(length,breadth)
+            {
+                  return length*breadth
+            }
+            // console.log(areaOfQuad(3,4)); 
+            function Display(figure,area)
+            {
+             console.log(`${figure} have area of ${area}`);
+            }
+            
+            Display("rectangle",areaOfQuad(3,5));
+
+            output:-Rectangle have area of 15.
+      </pre>
+
+      <p>Q2. "Write a callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
+
+            Explain callback hell.
+            Numbers
+            1
+            2
+            3
+            4
+            5
+            6
+            7"</p>
+
+<pre>Ans.
+      setTimeout(() => {
+            console.log("1");
+            setTimeout(() => {
+             console.log("2");
+             setTimeout(() => {
+                   console.log("3");
+                   setTimeout(() => {
+                         console.log("4");
+                         setTimeout(() => {
+                               console.log("5");
+                               setTimeout(() => {
+                                     console.log("6");
+                                     setTimeout(() => {
+                                           console.log("7");
+                                     }, 7000);
+                               }, 6000);
+                         }, 5000);
+                   }, 4000);
+             }, 3000);
+            }, 2000); 
+       }, 1000);
+
+       output:- 1 printed after 1sec,2 printed after 2 sec,3 will be printed after 3 sec...soon.
+</pre>
+<p>Q3. "Write the promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
+
+      Numbers
+      1
+      2
+      3
+      4
+      5
+      6
+      7"</p>
+      <pre>Ans.
+            promise.then(function(result){
+                  console.log(result);
+            },function(err){
+                  console.log(err)
+            })
+            function printnumber()
+            {
+            return new Promise((res,rej)=>{
+                  res(setTimeout(() => {
+                        console.log("1");
+                        setTimeout(() => {
+                              console.log("2");
+                              setTimeout(() => {
+                                    console.log("3");
+                                    setTimeout(() => {
+                                          console.log("4");
+                                          setTimeout(() => {
+                                                console.log("5");
+                                                setTimeout(() => {
+                                                      console.log("6");
+                                                      setTimeout(() => {
+                                                            console.log("7");
+                                                      }, 7000);
+                                                }, 6000);
+                                          }, 5000);
+                                    }, 4000);
+                              }, 3000);
+                        }, 2000);
+                  }, 1000));
+            })
+            } 
+            printnumber().then((result)=>console.log(result)).catch((err)=>console.log(err))
+            output:- 1 printed after 1sec,2 printed after 2 sec,3 will be printed after 3 sec...soon.
+
+      </pre>
+<p>Q4. "Create a promise function accepting an argument, if yes is passed to the function then it should go to resolved state and print Promise Resolved, and if nothing is passed 
+      then it should go to reject the state and catch the error and print Promise Rejected "</p>
+     <pre>Ans. 
+      var target=true;
+     function promiseFunction()
+     {
+      return new Promise(function(res,rej)
+      {
+            if(target)
+            {
+              res("Promise resolved succesfully!!!!")    
+            }
+            else{
+                  rej("Promise rejected!!")
+            }
+      })
+     }
+      
+      promiseFunction(target).then(function(result){
+            console.log(result);
+      },function(err){
+            console.log(err)
+      })
+
+
+      output:-Promise resolved Succesfully!!!!
+     </pre>
+
+     <p>Q5. Create examples to explain callback function</p>
+     <pre>Ans.
+      function totalAge(parentage,childage)
+      {
+           return parentage+childage
+      }
+     
+     
+      function Member(year,totalage){
+           console.log(`the age of father and son is ${totalage} in the year of ${year}`);
+      }
+     
+      Member(2022,totalAge(66,48))
+
+      Output:-the age of father and son is 114 in the year of 2022
+     </pre>
+     <p>Q6. Create examples to explain callback hell function</p>
+     <pre>Ans.
+      setTimeout(() => {
+            console.log("task executed in 1 second");
+            setTimeout(() => {
+                  console.log("task executed after 1 second on execution of previous one it means time interval is 1 sec");
+                  setTimeout(() => {
+                        console.log("task executed after 1 second on execution of previous one it means time interval is 1 sec");
+                        setTimeout(() => {
+                              console.log("task executed after 1 second on execution of previous one it means time interval is 1 sec");
+                              setTimeout(() => {
+                                    console.log("task executed after 1 second on execution of previous one it means time interval is 1 sec");
+                                    setTimeout(() => {
+                                          console.log("task executed after 1 second on execution of previous one it means time interval is 1 sec")
+                                    }, 1000);
+                              }, 1000);
+                        }, 1000);
+                  }, 1000);
+            }, 1000);
+      }, 1000);
+ <p>Q7. Create examples to explain promises function</p>   
+ <pre> Ans.
+      function promisefunc(number)
+      {
+            return  new Promise((res,rej)=>{
+                  if(number>10)
+                  {
+                        res(`${number} :is greater than 10`)
+                  }
+                  rej(`${number} : is not greater than 10`)
+            })
+      }
+      var number=17;
+      promisefunc(number).then((result)=>console.log(result),function(err){
+            console.log(err)
+      })
+
+      output:-17 :is greater than 10
+ </pre>   
+   
+ <p>Q8. Create examples to explain async await function</p>
+<pre>Ans.
+        async function fetchdata(){
+        const response=await fetch('https://api.github.com/users');
+    
+        const data= await response.json;
+        console.log(response)
+         }
+        fetchdata()
+         
+      Output:Response {type: 'cors', url: 'https://api.github.com/users', 
+        redirected: false, status: 200, ok: true, …}
+           
+</pre>
+       
+     <p>Q9. Create examples to explain promise.all function</p>
+     <pre>Ans.
+      let promise2=new Promise((res,rej)=>
+      {
+            setTimeout(()=>{
+                  res("promise 2 is done.")
+            },2000)
+      })
+      let promise3=new Promise ((res,rej)=>
+      {
+            setTimeout(()=>{
+                  res("promise 3 is done")
+            },3000)
+      })
+      let promise4 = new Promise((res,rej)=>{
+            res("promise 4 is done")
+      },4000)
+      
+      
+      Promise.all([promise1,promise2,promise3,promise4]).then((result)=>{
+            console.log(`All promise is done ${result}`);
+      })
+      output:-All promise is done promise 1 is done.,promise 2 is done.,promise 3 is done
+
+     </pre>
+
+      <script src="./index.js"></script>
+</body>
+</html>
