@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+       <h1>Maps and Sets handson</h1>
+       <p>Q1. "Problem:
+            You are given a string (STR) of length N, consisting of only the lower case English alphabet.
+            Your task is to remove all the duplicate occurrences of characters in the string.
+            
+            Input:
+            abcadeecfb
+            
+            Output:
+            abcdef"</p>
+            <pre>Ans.
+                  var string="abcadeecfb";
+                  var set1= new Set();
+                  
+                  for(var i= 0;i < string.length ; i++)
+                  {
+                    if(set1.has(string[i]))
+                        {
+                              continue;
+                        }
+                        else{
+                              set1.add(string[i])
+                        }
+                  }
+                  
+                  console.log(set1);
 
+                  output:-  abcdef ;
+            </pre>
+
+            <p>Q2."Problem:
+                  You are given a string (STR) of length N, you have to print the count of all alphabet.(using maps)
+                  
+                  Input:
+                  abcadeecfb
+                  
+                  Output:
+                  a=2
+                  b=2
+                  c=2
+                  d=1
+                  e=2
+                  f=1"</p>
+
+                  <pre>Ans. 
+                         
+function countCharacter(str) {
+      const Count1 = new Map();
+    
+      for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (Count1.has(char)) {
+          Count1.set(char, Count1.get(char) + 1);
+        } else {
+          Count1.set(char, 1);
+        }
+      }
+    
+      for (let [alphabet, count] of Count1) {
+        console.log(`${alphabet}=${count}`);
+      }
+    }
+    
+    
+    const str="abcadeecfb";
+    countCharacter(str);
+
+    output:        a=2
+                   b=2
+                   c=2
+                   d=1
+                   e=2
+                   f=1
+                  </pre>
+      <script src="./index.js"></script>
+      
+</body>
+</html>
